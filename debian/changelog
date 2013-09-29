@@ -1,10 +1,15 @@
-debathena-dns-config (1.8) UNRELEASED; urgency=low
+debathena-dns-config (1.8) unstable; urgency=low
 
+  [ Jonathan Reed ]
   * Switch from control.in to control (Trac: #561)
   * Bump Standards-Version to 3.9.3
   * Bump compat level to 7
 
- -- Jonathan Reed <jdreed@mit.edu>  Wed, 03 Apr 2013 13:38:28 -0400
+  [ Alexander Chernyakhovsky ]
+  * Add git-buildpackage configuration
+  * Set source format to 3.0 (native)
+
+ -- Alexander Chernyakhovsky <achernya@mit.edu>  Sun, 29 Sep 2013 05:29:13 -0400
 
 debathena-dns-config (1.7) unstable; urgency=low
 
