@@ -1,3 +1,10 @@
+debathena-dns-config (1.9) unstable; urgency=low
+
+  * Don't restart dnsmasq in the postinst, it might not work (Trac: #1131)
+  * Switch to Google Public DNS for the fallback DNS servers
+
+ -- Jonathan Reed <jdreed@mit.edu>  Fri, 23 May 2014 16:12:34 -0400
+
 debathena-dns-config (1.8) unstable; urgency=low
 
   [ Jonathan Reed ]
