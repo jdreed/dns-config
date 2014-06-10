@@ -1,3 +1,11 @@
+debathena-dns-config (1.10) unstable; urgency=low
+
+  * Do not Conflict bind9, instead just let APT decide to autoremove it later
+  * Convert to dh7
+  * Update the description to clarify that this is now for cluster-only
+
+ -- Jonathan Reed <jdreed@mit.edu>  Tue, 10 Jun 2014 10:15:22 -0400
+
 debathena-dns-config (1.9) unstable; urgency=low
 
   * Don't restart dnsmasq in the postinst, it might not work (Trac: #1131)

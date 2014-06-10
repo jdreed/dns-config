@@ -1,9 +1,9 @@
 #!/usr/bin/make -f
 
-# We used to divert /etc/bind/named.conf
-DEB_DIVERT_EXTENSION = .debathena
-DEB_UNDIVERT_FILES_debathena-dns-config += \
-	/etc/bind/named.conf.options.debathena
+%:
+	dh $@ --with config-package
 
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/rules/config-package.mk
+# In version 1.10 we stopped using bind9
+# (and thus stopped diverting its config)
+override_dh_configpackage:
+	dh_configpackage --undisplace /etc/bind/named.conf.options.debathena
