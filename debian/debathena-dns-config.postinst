@@ -22,10 +22,13 @@ set -e
 
 case "$1" in
     configure)
-	if hash invoke-rc.d 2>/dev/null; then
-	    invoke-rc.d debathena-dns-config restart
-	else
-	    /etc/init.d/debathena-dns-config restart
+	# If we're upgrading, delete the old lo.debathena-dns-config
+	# profile, which was a terrible idea to begin with.
+	if dpkg --compare-versions "$2" le 1.10~; then
+	    # This runs after the debhelper stuff, so it should
+	    # have rm_conffile'd it at this point.
+	    update-rc.d debathena-dns-config remove || :
+	    resolvconf -d lo.debathena-dns-config
 	fi
 	if ! grep -q '^nameserver' /etc/resolv.conf; then
 	    # Don't leave people without a nameserver

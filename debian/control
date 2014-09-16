@@ -2,7 +2,7 @@ Source: debathena-dns-config
 Section: debathena-config/net
 Priority: extra
 Maintainer: Debathena Project <debathena@mit.edu>
-Build-Depends: debhelper (>= 7.0.50~), config-package-dev (>= 5.0~)
+Build-Depends: debhelper (>= 8.1.0~), config-package-dev (>= 5.0~)
 Standards-Version: 3.9.3
 
 Package: debathena-dns-config
@@ -10,6 +10,4 @@ Architecture: all
 Depends: dnsmasq, resolvconf, ${misc:Depends}
 Description: Sets up a local caching nameserver using dnsmasq
  This package sets up a local caching nameserver using dnsmasq.  It is
- intended for use primarily on IS&T-managed public workstations, but may
- be used on other workstations with a static IP address configured by
- ifupdown.  Install this package at your own risk.
+ intended for use primarily on IS&T-managed public workstations.

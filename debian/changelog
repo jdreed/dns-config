@@ -1,3 +1,11 @@
+debathena-dns-config (1.11) unstable; urgency=low
+
+  * Give up on the initscript, because it used the wrong resolvconf
+    profile to begin with (lo.* are Special(tm) for dnsmasq) and because a
+    cluster machine's network should now be configured at install time.
+
+ -- Jonathan Reed <jdreed@mit.edu>  Tue, 16 Sep 2014 14:56:23 -0400
+
 debathena-dns-config (1.10) unstable; urgency=low
 
   * Do not Conflict bind9, instead just let APT decide to autoremove it later

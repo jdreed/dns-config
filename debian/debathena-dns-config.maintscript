@@ -1,0 +1,2 @@
+# We killed this in 1.11
+rm_conffile /etc/init.d/debathena-dns-config 1.10
